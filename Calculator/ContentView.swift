@@ -76,6 +76,7 @@ struct ContentView: View {
     @State private var selectedOperator : OperatorType?
     @State private var previousNumber : Int?
     @State private var operatorActive = false
+    @State private var continuingNumber = false
    
     
     
@@ -194,6 +195,7 @@ struct ContentView: View {
     
 
     func handleOperatorTap(tappedOperator : OperatorType){
+        continuingNumber = false
         if let previousNumber , let selectedOperator {
             
             switch selectedOperator {
@@ -225,13 +227,14 @@ struct ContentView: View {
     }
     
     func handleNumberTap (number : Numbers){
-        if let selectedOperator {
+        if let selectedOperator , !continuingNumber {
            
             previousNumber = displayedNumber
             displayedNumber = number.digit
+            continuingNumber = true
             //när vi checkat ifalll vi har en selectedOperator en gång, och därför satt previousNumber så borde vi kunna trycka på en siffra tills vi trycker på en operatorknapp.
             //här sätter vi ju previousNumber till displayNumber varje gång vi klickar på ett nummer så det blir bara nya siffror hela tiden. och därmer nya tal.
-            //self.selectedOperator = nil
+           
             //om
           
             
