@@ -35,9 +35,11 @@ enum OperatorType{
 struct ContentView: View {
     @State private var displayedNumber = 0
     @State private var selectedOperator : OperatorType?
-    @State private var sum = 0
-    @State private var firstNumber = 0
-  
+    @State private var previousNumber : Int?
+   
+    
+    
+    
     var body: some View {
         VStack {
             HStack{
@@ -45,10 +47,10 @@ struct ContentView: View {
                 Text(String(displayedNumber))
                     .font(.largeTitle)
                     .foregroundColor(Color.white)
-                    
+                
             }
-                    
-           
+            
+            
             HStack{
                 RoundButton(value: "A/C", backgroundColor: Color.gray){
                     displayedNumber = 0
@@ -61,130 +63,163 @@ struct ContentView: View {
                     
                 }
                 RoundButton(value: "/", backgroundColor: Color.orange){
-                    calculate(choosenOperator: .division)
+                    handleOperatorTap(tappedOperator: .division)
                     
                 }
             }
-                HStack{
-                    RoundButton(value: "1",backgroundColor: Color.gray){
-                       multiplyDigits(number: 1)
-                    }
-                    RoundButton(value: "2",backgroundColor: Color.gray){
-                        multiplyDigits(number: 2)
-                    }
-                    RoundButton(value:"3",backgroundColor: Color.gray)
-                    {
-                        multiplyDigits(number: 3)
-                    }
-                    RoundButton(value: "X", backgroundColor: Color.orange){
-                        calculate(choosenOperator: .multiplication)
-                        
-                    }
-                    
+            HStack{
+                RoundButton(value: "1",backgroundColor: Color.gray){
+                    handleNumberTap(number: 1)
+                }
+                RoundButton(value: "2",backgroundColor: Color.gray){
+                    handleNumberTap(number: 2)
+                }
+                RoundButton(value:"3",backgroundColor: Color.gray)
+                {
+                    handleNumberTap(number: 3)
+                }
+                RoundButton(value: "X", backgroundColor: Color.orange){
+                    handleOperatorTap(tappedOperator: .multiplication)
                     
                 }
-                HStack{
-                    RoundButton(value:"4",backgroundColor: Color.gray){
-                      multiplyDigits(number: 4)
-                    }
-                    RoundButton(value: "5",backgroundColor: Color.gray){
-                        multiplyDigits(number: 5)
-                    }
-                    RoundButton(value: "6",backgroundColor: Color.gray ){
-                        multiplyDigits(number: 6)
-                    }
-                    RoundButton(value: "-", backgroundColor: Color.orange){
-                        calculate(choosenOperator: .subtraction)
-                        
-                    }
-                }
-                HStack{
-                    RoundButton(value: "7",backgroundColor: Color.gray){
-                       multiplyDigits(number: 7)
-                    }
-                    RoundButton(value: "8", backgroundColor: Color.gray){
-                        multiplyDigits(number: 8)
-                    }
-                    RoundButton(value: "9", backgroundColor: Color.gray){
-                       multiplyDigits(number: 9)
-                    }
-                    RoundButton(value: "+", backgroundColor: Color.orange){
-                        //1.save the first number as firstNumber and save the operator as selected operator
-                        calculate(choosenOperator: .addition)
-                        
-                        
-                        
-                        
-                    }
                 
-               
+                
+            }
+            HStack{
+                RoundButton(value:"4",backgroundColor: Color.gray){
+                    handleNumberTap(number: 4)
+                }
+                RoundButton(value: "5",backgroundColor: Color.gray){
+                    handleNumberTap(number: 5)
+                }
+                RoundButton(value: "6",backgroundColor: Color.gray ){
+                    handleNumberTap(number: 6)
+                }
+                RoundButton(value: "-", backgroundColor: Color.orange){
+                    handleOperatorTap(tappedOperator: .subtraction)
+                    
+                }
+            }
+            HStack{
+                RoundButton(value: "7",backgroundColor: Color.gray){
+                    handleNumberTap(number: 7)
+                }
+                RoundButton(value: "8", backgroundColor: Color.gray){
+                    handleNumberTap(number: 8)
+                }
+                RoundButton(value: "9", backgroundColor: Color.gray){
+                    handleNumberTap(number: 9)
+                }
+                RoundButton(value: "+", backgroundColor: Color.orange){
+                    handleOperatorTap(tappedOperator: .addition)
+                    
+                    
+                    
+                    
+                }
+                
+                
             }
             
             HStack{
                 
                 RoundButton(value: "0", backgroundColor: Color.gray){
-                    multiplyDigits(number: 0)
+                    handleNumberTap(number: 0)
                 }
                 .padding(.horizontal)
-            
+                
                 RoundButton(value: ",", backgroundColor: Color.gray){
                     
                 }
                 RoundButton(value: "=", backgroundColor: Color.orange){
-                    equalSign(selectedOperator: .equal)
+                    handleOperatorTap(tappedOperator: .equal)
                     
                 }
             }
             
             
-           
+            
             
         }
         .padding(50)
         .background(Color.black)
-           
-       
+        
+        
     }
     
-    func calculate(choosenOperator: OperatorType){
-        selectedOperator = choosenOperator
-        firstNumber = displayedNumber
-        print("\(firstNumber)  \(selectedOperator) ")
-        //inputNumbers = 0
+    /*func calculate(choosenOperator: OperatorType){
+     selectedOperator = choosenOperator
+     firstNumber = displayedNumber
+     print("\(firstNumber)  \(selectedOperator) ")
+     displayedNumber = 0
+     
+     
+     }*/
+    
+    /*func equalSign(selectedOperator : OperatorType, numberToModify : Int){
+     //when we click the equalSigns for the second time we
+     switch selectedOperator {
+     case .addition:
+     //first number should be changed into
+     sum =   numberToModify + displayedNumber
+     print(" printing the sum\(sum)")
+     displayedNumber = sum
+     
+     
+     case .subtraction:
+     sum =  displayedNumber - numberToModify
+     print(" printing the sum\(sum)")
+     displayedNumber = sum
+     case .multiplication:
+     sum =  displayedNumber * numberToModify
+     print(" printing the sum\(sum)")
+     displayedNumber = sum
+     case .division:
+     sum = displayedNumber / numberToModify
+     print(" printing the sum\(sum)")
+     displayedNumber = sum
+     default: break
+     
+     }
+     
+     
+     
+     
+     
+     
+     
+     }*/
+    func handleOperatorTap(tappedOperator : OperatorType){
+        if let previousNumber , let selectedOperator {
+            switch selectedOperator {
+            case .addition:
+                displayedNumber = previousNumber + displayedNumber
+            case .subtraction:
+                displayedNumber = previousNumber - displayedNumber
+            case .multiplication:
+                displayedNumber = previousNumber * displayedNumber
+            case .division:
+                displayedNumber = previousNumber / displayedNumber
+            case .equal:
+                break
+            }
+            self.previousNumber = nil
+            
+        } else{
+            selectedOperator = tappedOperator
+        }
+        
         
         
     }
-   
-    func equalSign(selectedOperator : OperatorType){
-        //when we click the equalSigns for the second time we
-        switch selectedOperator {
-        case .addition:
-            sum = firstNumber + displayedNumber
-            print(" printing the sum\(sum)")
-            displayedNumber = sum
-           
-                        
-        case .subtraction:
-            sum = firstNumber - displayedNumber
-            print(" printing the sum\(sum)")
-            displayedNumber = sum
-        case .multiplication:
-            sum = firstNumber * displayedNumber
-            print(" printing the sum\(sum)")
-            displayedNumber = sum
-        case .division:
-            sum = firstNumber / displayedNumber
-            print(" printing the sum\(sum)")
-            displayedNumber = sum
-        default: break
-            
-                    }
-        
-        
-     
-  
-        
-
+    
+    func handleNumberTap (number : Int){
+        if let selectedOperator {
+            previousNumber = displayedNumber
+            displayedNumber = number
+        }else{
+            multiplyDigits(number: number)
+        }
         
     }
     
