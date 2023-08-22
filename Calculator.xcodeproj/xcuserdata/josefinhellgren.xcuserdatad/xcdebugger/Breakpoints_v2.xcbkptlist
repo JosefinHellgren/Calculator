@@ -8,34 +8,34 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "694A3D33-C081-4197-8A52-95863FE691E7"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Calculator/ContentView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "209"
-            endingLineNumber = "209"
+            startingLineNumber = "220"
+            endingLineNumber = "220"
             landmarkName = "handleOperatorTap(tappedOperator:)"
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "694A3D33-C081-4197-8A52-95863FE691E7 - 13d106696a4aeeed"
+                  uuid = "694A3D33-C081-4197-8A52-95863FE691E7 - 79cb711bfe308a19"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "Calculator.ContentView.handleOperatorTap(tappedOperator: Calculator.OperatorType) -&gt; ()"
+                  symbolName = "closure #1 () -&gt; () in Calculator.RoundButton.body.getter : some"
                   moduleName = "Calculator"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/josefinhellgren/Desktop/ios/Calculator/Calculator/ContentView.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "209"
-                  endingLineNumber = "209"
-                  offsetFromSymbolStart = "1828">
+                  startingLineNumber = "248"
+                  endingLineNumber = "248"
+                  offsetFromSymbolStart = "28">
                </Location>
                <Location
-                  uuid = "694A3D33-C081-4197-8A52-95863FE691E7 - 13d106696a4aeeed"
+                  uuid = "694A3D33-C081-4197-8A52-95863FE691E7 - 13d106696a4aebf7"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -45,9 +45,121 @@
                   urlString = "file:///Users/josefinhellgren/Desktop/ios/Calculator/Calculator/ContentView.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "209"
-                  endingLineNumber = "209"
+                  startingLineNumber = "247"
+                  endingLineNumber = "247"
                   offsetFromSymbolStart = "1840">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "EFABC75F-86C5-4BF3-9F47-BBF50ECB3E42"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Calculator/ContentView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "200"
+            endingLineNumber = "200"
+            landmarkName = "handleOperatorTap(tappedOperator:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C0550348-B4BC-4333-A288-763128980F73"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Calculator/ContentView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "207"
+            endingLineNumber = "207"
+            landmarkName = "handleOperatorTap(tappedOperator:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "C0550348-B4BC-4333-A288-763128980F73 - 13d106696a4aeaa8"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Calculator.ContentView.handleOperatorTap(tappedOperator: Calculator.OperatorType) -&gt; ()"
+                  moduleName = "Calculator"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/josefinhellgren/Desktop/ios/Calculator/Calculator/ContentView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "238"
+                  endingLineNumber = "238"
+                  offsetFromSymbolStart = "1016">
+               </Location>
+               <Location
+                  uuid = "C0550348-B4BC-4333-A288-763128980F73 - 13d106696a4aeaa8"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Calculator.ContentView.handleOperatorTap(tappedOperator: Calculator.OperatorType) -&gt; ()"
+                  moduleName = "Calculator"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/josefinhellgren/Desktop/ios/Calculator/Calculator/ContentView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "238"
+                  endingLineNumber = "238"
+                  offsetFromSymbolStart = "1036">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "CB726CA3-2582-4F52-8A9A-7EE2041CB2B1"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Calculator/ContentView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "199"
+            endingLineNumber = "199"
+            landmarkName = "handleOperatorTap(tappedOperator:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "CB726CA3-2582-4F52-8A9A-7EE2041CB2B1 - 13d106696a4aedc5"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Calculator.ContentView.handleOperatorTap(tappedOperator: Calculator.OperatorType) -&gt; ()"
+                  moduleName = "Calculator"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/josefinhellgren/Desktop/ios/Calculator/Calculator/ContentView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "233"
+                  endingLineNumber = "233"
+                  offsetFromSymbolStart = "492">
+               </Location>
+               <Location
+                  uuid = "CB726CA3-2582-4F52-8A9A-7EE2041CB2B1 - 13d106696a4aedc5"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Calculator.ContentView.handleOperatorTap(tappedOperator: Calculator.OperatorType) -&gt; ()"
+                  moduleName = "Calculator"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/josefinhellgren/Desktop/ios/Calculator/Calculator/ContentView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "233"
+                  endingLineNumber = "233"
+                  offsetFromSymbolStart = "508">
                </Location>
             </Locations>
          </BreakpointContent>
